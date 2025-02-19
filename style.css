@@ -1,0 +1,141 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFFFFF; /* Fundo branco */
+    margin: 0;
+    font-family: 'Press Start 2P', cursive; /* Alteração para fonte pixelada */
+}
+
+.titulo {
+    color: #ADD8E6; /* Azul Gelo */
+}
+
+.subtitulo {
+    color: #ADD8E6; /* Azul Gelo */
+}
+
+.resultado {
+    color: #FFFFFF; /* Texto em branco */
+}
+
+.game-container {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ADD8E6; /* Azul Gelo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px; /* Ajustei para garantir que as palavras caibam */
+    color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    position: relative;
+    perspective: 1000px;
+}
+
+.cell-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.cell.flip .cell-inner {
+    transform: rotateY(180deg);
+}
+
+.cell-front, .cell-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px; /* Ajustei para garantir que as palavras caibam */
+}
+
+.cell-front {
+    background-color: #ADD8E6; /* Azul Gelo */
+}
+
+.cell-back {
+    background-color: #4682B4; /* Azul Real */
+    transform: rotateY(180deg);
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+    background-color: #4682B4; /* Azul Real */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Press Start 2P', cursive; /* Aplicação da nova fonte */
+}
+
+.envelope {
+    font-size: 48px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.letter {
+    background-color: #ffffff;
+    color: #4682B4; /* Azul Real para a escrita da carta */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Lora', serif; /* Aplicação da nova fonte para a carta */
+    font-size: 16px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000080; /* Azul Noite */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive; /* Aplicação da nova fonte */
+    font-size: 14px; /* Ajuste do tamanho da fonte */
+}
+
+button:hover {
+    background-color: #4682B4; /* Azul Real */
+}
+
+
+
+
+
+
+
+
+
+
